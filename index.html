@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscripts.js"></script>
+</head>
+<body>
+    
+        <nav class="nav">
+            <div class="container nav-content">
+                <h1>WriteHub</h1>
+                <div class="nav-links">
+                    <a href="#" id="blogLink">Blog</a>
+                    <a href="#" id="goalsLink">Goals</a>
+                    <a href="Notes.html" id="notesLink">Notes</a>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <div class="main-content">
+                <!-- Blog Editor Section -->
+                <div class="editor-container">
+                    <div class="editor-toolbar">
+                        <button class="toolbar-btn" data-command="bold">B</button>
+                        <button class="toolbar-btn" data-command="italic">I</button>
+                        <button class="toolbar-btn" data-command="underline">U</button>
+                        <button class="toolbar-btn" data-command="h1">H1</button>
+                        <button class="toolbar-btn" data-command="h2">H2</button>
+                        <button class="toolbar-btn" data-command="insertUnorderedList">•</button>
+                    </div>
+                    <div id="editor" contenteditable="true"></div>
+                    <button id="savePost" class="toolbar-btn">Save Post</button>
+                </div>
+    
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Calendar -->
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <h3>Writing Schedule</h3>
+                            <button class="toolbar-btn" id="addEvent">+ Event</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid"></div>
+                    </div>
+    
+                    <!-- Writing Goals -->
+                    <div class="goals-container">
+                        <h3>Daily Goals</h3>
+                        <div id="goalsList"></div>
+                        <button class="toolbar-btn" id="addGoal">+ New Goal</button>
+                    </div>
+    
+                    <!-- Mind Map -->
+                    <div class="mind-map">
+                        <h3>Mind Map</h3>
+                        <div id="mindMapContainer"></div>
+                        <button class="toolbar-btn" id="addNode">+ Add Node</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

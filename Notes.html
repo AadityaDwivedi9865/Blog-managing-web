@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="Notes.css">
+    <script src="notes.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-content">
+            <h1>WriteHub</h1>
+            <div class="nav-links">
+                <a href="index.html" id="blogLink">Blog</a>
+                <a href="index.html" id="goalsLink">Goals</a>
+                <a href="notes.html" id="notesLink" class="active">Notes</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notes-container">
+        <!-- Notes Sidebar -->
+        <div class="notes-sidebar">
+            <input type="text" class="search-bar" placeholder="Search notes...">
+            
+            <div class="folder-list">
+                <div class="folder-item">
+                    <span class="folder-icon">📁</span>
+                    <span>All Notes</span>
+                </div>
+                <div class="folder-item">
+                    <span class="folder-icon">⭐</span>
+                    <span>Favorites</span>
+                </div>
+                <div class="folder-item">
+                    <span class="folder-icon">🗑️</span>
+                    <span>Trash</span>
+                </div>
+            </div>
+
+            <div class="note-categories">
+                <span class="category-tag">Personal</span>
+                <span class="category-tag">Work</span>
+                <span class="category-tag">Ideas</span>
+                <span class="category-tag">+ New</span>
+            </div>
+
+            <div class="notes-list" id="notesList">
+                <!-- Notes will be dynamically added here -->
+            </div>
+
+            <button class="toolbar-btn" id="newNote">+ New Note</button>
+        </div>
+
+        <!-- Note Editor -->
+        <div class="note-editor">
+            <div class="note-toolbar">
+                <button class="toolbar-btn" data-command="bold">B</button>
+                <button class="toolbar-btn" data-command="italic">I</button>
+                <button class="toolbar-btn" data-command="underline">U</button>
+                <button class="toolbar-btn" data-command="h1">H1</button>
+                <button class="toolbar-btn" data-command="h2">H2</button>
+                <button class="toolbar-btn" data-command="insertUnorderedList">•</button>
+                <button class="toolbar-btn" data-command="createLink">🔗</button>
+                <button class="toolbar-btn" data-command="insertImage">📷</button>
+            </div>
+            
+            <input type="text" id="noteTitle" placeholder="Note Title" class="search-bar">
+            
+            <div class="note-content" id="noteContent" contenteditable="true"></div>
+            
+            <div class="note-actions">
+                <div>
+                    <button class="toolbar-btn" id="saveNote">Save</button>
+                    <button class="toolbar-btn" id="deleteNote">Delete</button>
+                </div>
+                <div>
+                    <button class="toolbar-btn" id="favoriteNote">⭐</button>
+                    <button class="toolbar-btn" id="shareNote">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
